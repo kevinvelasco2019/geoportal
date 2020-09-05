@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>
+      Registrarse
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <body>
+    
+    <form #formulario="ngForm" class="formulario">
+      <img class="imagen" src="../../assets/icon/registro.png">
+        <ion-label position="floating">Nombre:</ion-label>
+        <ion-input [(ngModel)]="nombre" required class="campos" type="text" name="nombre"></ion-input>
+        <ion-label position="floating">Apellido:</ion-label>
+        <ion-input [(ngModel)]="apellido" required class="campos" type="text" name="apellido"></ion-input>
+        <ion-label position="floating">Correo Electrónico:</ion-label>
+        <ion-input [(ngModel)]="email" required pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" class="campos" type="email" name="email"></ion-input>
+        <ion-label position="floating">Contraseña:</ion-label>
+        <ion-input [(ngModel)]="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" class="campos" type="password" name="contraseña"></ion-input>
+        <ion-label position="floating">Confirmar contraseña:</ion-label>
+        <ion-input [(ngModel)]="confirmarpassword" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" class="campos" type="password" name="confirmcontraseña"></ion-input>
+        <ion-label>Min 8 caracteres 1 mayuscula, 1 número</ion-label>
+        <ion-button class="ion-text-center botones" [disabled]="formulario.invalid" color="danger" (click)="crearUsuario()">Registrarse</ion-button>
+        <ion-button class="ion-text-center botones" color="dark" (click)="iniciarSesion()">Ya tengo una cuenta</ion-button>
+    </form>
+  </body>
+</ion-content>

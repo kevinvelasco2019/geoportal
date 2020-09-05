@@ -1,27 +1,37 @@
-#container {
+.top{
+  font-weight: bold;
+  font-size: 18px;
+  margin-right: 15px;
+}
+.imagen{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  height: 150px;
+  width: 150px;
+}
+.body{
+  margin-top: 40%;
+}
+.texto{
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
 }
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.seccion{
+  margin-left: 20px;
+  margin-right: 20px;
+  justify-content: center;
+  display: flex;
 }
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.boton{
+  width: 180px;
+  height: 40px;
 }
-
-#container a {
-  text-decoration: none;
+.inferior{
+  justify-content: center;
+  display: flex;
 }

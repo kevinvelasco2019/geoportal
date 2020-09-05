@@ -1,0 +1,42 @@
+#map{
+    width: 100%;
+    height: 100%;
+    display: block;
+    opacity: 0;
+    transition: opacity 150ms ease-in;
+    &.show-map{
+        opacity: 1;
+    }
+}
+.label{
+    color: black;
+    margin-left:10px;
+}
+.card{
+    font-weight: bold;
+    font-size: 16px;
+}
+.icon{
+    margin-right: 5px;
+}
+ion-slides {
+    height: 240px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+.botones{
+    width: 100%;
+    height: 30px;
+    font-weight: bold;
+  }
+  #trazo{
+    width: 100%;
+    height: 100%;
+    display: block;
+    opacity: 0;
+    transition: opacity 150ms ease-in;
+    &.show-map{
+        opacity: 1;
+    }
+}

@@ -1,20 +1,20 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+<ion-header>
 </ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <ion-toolbar color="dark">
+    <ion-label color="success" slot="end" class="top" (click)="iniciarSesion()">Iniciar Sesión </ion-label>
+    <ion-label color="danger" slot="end" class="top" (click)="registrarse()">Registrarse</ion-label>
+  </ion-toolbar>
+<ion-content>
+  <body class="body">
+    <div class="seccion">
+    <ion-label class="texto ion-text-lg-end">Bienvenido al Geoportal de Puntos de Pagos.</ion-label>
   </div>
+  <div>
+    <img class="imagen" src="../../assets/icon/home.png">
+  </div>
+  <div class="inferior">
+    <ion-button shape="round" color="danger" class="boton" (click)="menu()">EXPLORAR AHORA!</ion-button>
+  </div>  
+  </body>
 </ion-content>
+

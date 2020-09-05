@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>Menú Principal</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<ion-list lines="none" class="lista">
+  <ion-item (click)="buscar()">
+    <ion-icon class="iconos" name="locate" color="dark"></ion-icon><br>
+    <ion-label class="texto">Visualizar Mapa</ion-label>
+  </ion-item>
+  <ion-item class="items" (click)="rutas()">
+    <ion-icon class="iconos" name="search" color="dark"></ion-icon><br>
+    <ion-label class="texto">Buscar Establecimiento</ion-label>
+  </ion-item>
+  <ion-item class="items" (click)="salir()">
+    <ion-icon class="iconos" name="arrow-back-circle" color="dark"></ion-icon><br>
+    <ion-label class="texto">Regresar</ion-label>
+  </ion-item>
+</ion-list>
+<div>
+  <img class="imagen" src="../../assets/icon/home.png">
+</div>
+  <!--<ion-button class="ion-text-center" (click)="cerrarSesion()">Cerrar Sesión</ion-button> -->
+</ion-content>
+

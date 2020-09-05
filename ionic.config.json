@@ -1,5 +1,7 @@
 {
   "name": "TesisGeoportal",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

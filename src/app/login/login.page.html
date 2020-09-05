@@ -1,0 +1,25 @@
+<ion-header>
+</ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>
+      Iniciar Sesión
+    </ion-title>
+  </ion-toolbar>
+<ion-content>
+  <body>
+    
+    <form #formulario="ngForm" class="formulario">
+      <img class="imagen" src="../../assets/icon/login.png">
+      <div>
+        <ion-label class="labels" position="floating">Correo Electrónico:</ion-label>
+        <ion-input class="inputs" required pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" [(ngModel)]="email" type="text" name="usuario" ></ion-input>
+        <ion-label class="labels" position="floating">Contraseña:</ion-label>
+        <ion-input class="inputs" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" [(ngModel)]="password" type="password" name="contraseña"></ion-input>
+      </div>
+      <ion-button class="ion-text-center botones"color="danger" [disabled]="formulario.invalid" (click)="iniciarSesion()">Ingresar</ion-button>
+      <ion-label class="label" color="dark">¿No tienes una cuenta?</ion-label>
+      <ion-button class="ion-text-center botones" (click)="registrarse()" color="dark">Registrarse ahora</ion-button>  
+    </form>
+  </body>
+</ion-content>
+

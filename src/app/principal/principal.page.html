@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Agregar un nuevo establecimiento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="map"></div>
+  <div id="formulario" >
+    <ion-label position="floating">Nombre del Establecimiento:</ion-label>
+    <ion-input class="campos" [(ngModel)]="nombre" type="text" name="nombre"></ion-input>
+    <ion-label position="floating">Dirección:</ion-label>
+    <ion-input class="campos" [(ngModel)]="direccion" type="text" name="direccion"></ion-input>
+    <ion-label position="floating">Sector:</ion-label>
+    <ion-input class="campos" [(ngModel)]="sector" type="text" name="sector"></ion-input>
+    <ion-label position="floating">Descripción:</ion-label>
+    <ion-input class="campos" [(ngModel)]="descripcion" type="text" name="descripcion"></ion-input>
+    <ion-label position="floating" class="id">Latitud:</ion-label>
+    <ion-input class="campos" [(ngModel)]="latitudActual" class="id" type="text" name="descripcion"></ion-input>
+    <ion-label position="floating" class="id">longitud:</ion-label>
+    <ion-input class="campos" [(ngModel)]="longitudActual" class="id" type="text" name="descripcion"></ion-input>
+    <ion-label position="floating">Pagos Disponibles:</ion-label>
+    <ion-list class="ion-no-padding">
+      <ion-item *ngFor="let servicio of servicios" (click)="checks(servicio)">
+        <ion-label>{{servicio.nombre}}</ion-label>
+        <ion-checkbox [(ngModel)]="servicio.selected"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+    <ion-button class="ion-text-center botones" color="danger" (click)="coords()">Ingresar Establecimiento</ion-button>
+  </div>
+  
+</ion-content>

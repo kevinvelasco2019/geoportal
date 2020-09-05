@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Estadísticas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="cuadricula">
+  <ion-grid >
+    <ion-row class="espacio">
+      <ion-col (click)="busquedas()">
+        <ion-icon class="tamañoIcono" name="bar-chart" color="dark"></ion-icon>
+        <br/>
+        <ion-label class="label" color="dark">Estadísticas por Establecimiento</ion-label>
+      </ion-col>
+      <ion-col (click)="busquedasPlataforma()">
+        <ion-icon class="tamañoIcono" name="stats-chart" color="dark"></ion-icon>
+        <br/>
+        <ion-label class="label" color="dark">Estadísticas por Plataforma</ion-label>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+    <!--<ion-button class="ion-text-center" (click)="cerrarSesion()">Cerrar Sesión</ion-button> -->
+  </ion-content>
